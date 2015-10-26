@@ -17,7 +17,6 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <owl:Ontology rdf:about="http://cdhekne.github.io/mooc.owl">
         <owl:imports rdf:resource="http://schema.rdfs.org/all"/>
-        <owl:versionIRI rdf:resource="http://cdhekne.github.io/mooc.owl/1.0.0"/>
     </owl:Ontology>
     
 
