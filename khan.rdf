@@ -35,16 +35,17 @@ The science "snacks" on this website are fun, hands-on activities developed and 
     <mooc:coursePricing>Free</mooc:coursePricing>
   </rdf:Description>
   <rdf:Description rdf:about="http://cdhekne.github.io/x247213a3">
+    <rdf:type rdf:resource="http://www.semanticweb.org/cdhekne/ontologies/2015/10/untitled-ontology-8#Course"/>
     <mooc:courseType>Topic</mooc:courseType>
     <mooc:coursePricing>Free</mooc:coursePricing>
     <mooc:courseProvider>khanacademy.com</mooc:courseProvider>
     <mooc:courseLink>http://www.khanacademy.org/humanities/global-culture</mooc:courseLink>
-    <rdf:type rdf:resource="http://www.semanticweb.org/cdhekne/ontologies/2015/10/untitled-ontology-8#Course"/>
     <mooc:courseDescription>1970-the present: Beuys, Hirst, Hadid and more.</mooc:courseDescription>
     <mooc:hasCategory rdf:nodeID="A5"/>
     <mooc:courseName>Toward a global culture</mooc:courseName>
   </rdf:Description>
   <rdf:Description rdf:about="http://cdhekne.github.io/x4b0eb531">
+    <rdf:type rdf:resource="http://www.semanticweb.org/cdhekne/ontologies/2015/10/untitled-ontology-8#Course"/>
     <mooc:coursePricing>Free</mooc:coursePricing>
     <mooc:courseName>Art of Medieval Europe</mooc:courseName>
     <mooc:courseLink>http://www.khanacademy.org/humanities/medieval-world</mooc:courseLink>
@@ -52,7 +53,6 @@ The science "snacks" on this website are fun, hands-on activities developed and 
     <mooc:courseType>Topic</mooc:courseType>
     <mooc:courseProvider>khanacademy.com</mooc:courseProvider>
     <mooc:courseDescription>400-1400: Catacombs, cathedrals, Giotto, and more.</mooc:courseDescription>
-    <rdf:type rdf:resource="http://www.semanticweb.org/cdhekne/ontologies/2015/10/untitled-ontology-8#Course"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://cdhekne.github.io/x0540a26a">
     <mooc:coursePricing>Free</mooc:coursePricing>
