@@ -19,6 +19,25 @@ public class Project {
 
 	}
 
+	
+	/** Algorithm
+	 * 
+	 * 1. Create a OuterHashMap of Space and LHM<Hours of day, Content ID>
+	 * 2. Init these with null values.
+	 * 3. Create a HM for Space Multiplier and another HM for Content Weights of all spaces
+	 * 4. Init weights of all spaces to 0.
+	 * 5. Read i/p line by line.
+	 * 6. First, check if different contents have been scheduled at the same space at the same time.
+	 * 	 -- If yes, replace the content with lower weight with the content having higher weight.
+	 * 7. Next, for each space, check whether the same content has been scheduled at the same time in the other spaces.
+	 *   -- If yes, replace the content in lower space multiplier with the one with higher space multiplier.
+	 *   -- Such issues are to remove overlapping problems between contents
+	 * 8. Now schedule the content in the appropriate space at the appr sTime and eTime. Be sure to update the corresponding weight of the content 
+	 *    in the ContentWeight HM.
+	 * 9. Repeat from step 5. 
+	 * 10. End
+	 */
+	
 	private void firstPart(File fp) {
 
 		Map<Integer, LinkedHashMap<Integer, Integer>> map = new HashMap<Integer, LinkedHashMap<Integer,Integer>>();
@@ -70,7 +89,7 @@ public class Project {
 				if(map.get(contentObj.space).get(contentObj.startTime)!=null){
 					if(contentObj.weight>= weightHM.get(contentObj.space)[contentObj.startTime])
 					{
-						//To check when diff Cid is present in same space at same time
+						
 						int timeDiff = contentObj.startTime;
 						while(timeDiff<contentObj.endTime){
 							LinkedHashMap<Integer,Integer> innerMap = map.get(contentObj.space);
@@ -83,7 +102,8 @@ public class Project {
 						}
 					}
 				}
-/* 
+/*  Checking if same contents have been scheduled at any other space at the same time.
+ *  If yes, then depending upon the space multipliers, the appropriate contents will be scheduled and the other one replaced by null.
  * 
 **/
 				else{
@@ -153,7 +173,9 @@ public class Project {
 
 	{
 
-		// To check when same CID is present in different spaces at same same
+	/* We have to overwrite the content with new content only if the space multiplier is higher for the new content, not otherwise.
+	 * 
+	 * */
 		if(spaceMultiplierHM.get(contentObj.space)>spaceMultiplierHM.get(overLappedSpace)){
 			LinkedHashMap<Integer,Integer> innerMap = map.get(overLappedSpace);
 			innerMap.put(timeDiff, null);
